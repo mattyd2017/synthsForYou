@@ -1,0 +1,43 @@
+.composition {
+    position: relative;
+    padding: 2rem; 
+    
+
+    &__photo {
+        width: 60%;
+        height: 1050%;
+        box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, .4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: transform .3s ease;    
+        // transform: all 1s;
+        outline-offset: 0.5rem;      
+        
+        
+        &--p1 {
+            left: 0;
+            top: -4rem
+        }
+        &--p2 {
+            right: 0;
+            top: 4rem
+        }
+        &--p3 {
+            left: 15%;
+            top: 15rem;
+        }
+        &:hover {
+            outline: 0.7rem solid $color-outline; 
+            transform: scale(1.005) translateY(-.7rem);
+            box-shadow: 0 1rem 4rem rgba($color-primary-dark, .8);  
+            z-index: 20;
+        }
+    }
+    &:hover &__photo:not(:hover) {
+        transform: scale(.90);
+    }
+} 
+   
+
+

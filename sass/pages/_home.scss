@@ -1,0 +1,21 @@
+.section-about {
+    background-color: $color-light-pink;
+    padding: 15rem 0; 
+    margin-top: -29vh; 
+}
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.808), rgba($color-primary-dark, 1)), url(../imgs/minimoog.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -10rem; 
+    & > * {
+        transform: skewY(6deg);
+    }
+
+}
+.section-tours {
+    background-color: $color-light-pink;
+    padding: 15rem 5rem 50rem 0; 
+    margin-top: -20vh; 
+}

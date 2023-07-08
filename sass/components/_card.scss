@@ -1,0 +1,159 @@
+.card {
+    perspective: 200rem;
+    -moz-perspective: 200rem;
+    position: relative;
+    height: 70rem; 
+    &__side {
+            height: 70rem;
+            transition: all 1.4s ease; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, .15);  
+
+            &--front {
+                background-color: $color-white;
+            }
+            &--back {
+                
+                transform: rotateY(-180deg);
+                &-1 {
+                    background-image: linear-gradient(to right top, $card-color-back-1-light, $card-color-back-1-dark);   
+                }
+                &-2 {
+                    background-image: linear-gradient(to right top, $card-color-back-2-light, $card-color-back-2-dark);    
+                }
+                &-3 {
+                    background-image: linear-gradient(to right top, $card-color-back-4-light, $card-color-back-4-dark);      
+                }
+            }
+        }
+
+    &:hover &__side--front {
+       transform: rotateY(180deg); 
+    }
+    &:hover &__side--back {
+        transform: rotateY(0deg); 
+    }
+    
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 13rem;    
+        right: 2rem;
+        width: 60%;
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;  
+        box-decoration-break: clone;
+        &--1 {
+           background-image: linear-gradient(to right bottom, rgba($card-color-back-1-light, .7), rgba($card-color-back-1-dark, .5)); 
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($card-color-back-2-light, .9), rgba($card-color-back-2-dark, .4));               
+        }
+        
+        &--3 {
+            background-image: linear-gradient(to right top, rgba($card-color-back-2-light, 1), rgba($card-color-back-2-dark, 3));   
+         }
+         &--4 {
+            background-image: linear-gradient(to right top, rgba($card-color-back-2-light, .7), rgba($card-color-back-2-dark, .5));   
+         }
+         &--5 {
+            background-image: linear-gradient(to right top, rgba($card-color-back-3-light, 1), rgba($card-color-back-3-dark, 3));   
+         }
+         &--6 {
+            background-image: linear-gradient(to right top, rgba($card-color-back-3-light, .7), rgba($card-color-back-3-dark, .5));   
+         }
+    }
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;  
+                
+            li {
+                text-align: justify;
+                font-size: 1.2rem;
+                color: $card-text-color-1;
+                padding: 0.05rem;   
+                &:not(:last-child) {
+                    border-bottom: 1px solid $card-color-back-1-dark;
+                }
+            }
+            
+        }      
+    }
+    &__picture {
+        background-size: cover;
+        height: 25rem;
+        background-blend-mode: screen;
+        -webkit-clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        &--1 {
+              background-image: linear-gradient(to right bottom, $card-color-back-1-light, 
+              $card-color-back-1-dark), url(../imgs/d50.jpg); 
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, $card-color-back-2-light, 
+              $card-color-back-2-dark), url(../imgs/osc.jpg);         
+        }
+        &--3 {
+            background-image: linear-gradient(to right top, $card-color-back-1-light, $card-color-back-1-dark ),url(../imgs/wav.jpg);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, $card-color-back-2-light, $card-color-back-2-dark ),url(../imgs/jp8.jpg); 
+          }
+        &--5 {
+            background-image: linear-gradient(to right bottom, $card-color-back-4-light, $card-color-back-4-dark ),url(../imgs/op6.jpg);
+          }
+        &--6 {
+            background-image: linear-gradient(to right bottom, $card-color-back-4-light, $card-color-back-4-dark ),url(../imgs/dx7.jpg);
+          }
+        }
+        &__details--backdetail {
+            text-align: justify;
+            font-size: 2rem;
+            color: $card-text-color-1;  
+            padding: 0.05rem;
+            border-bottom: 2px solid $card-color-back-1-dark; 
+            border-top: 2px solid $card-color-back-1-dark;
+            &-1 {
+           
+                border-bottom: 2px solid $card-color-border-back-1; 
+                border-top: 2px solid $card-color-border-back-1;
+                  
+            }
+            &-2 {
+           
+                border-bottom: 2px solid $card-color-border-back-1; 
+                border-top: 2px solid $card-color-border-back-1;
+                  
+            }
+            &-3{
+                border-bottom: 2px solid $card-color-border-back-2; 
+                border-top: 2px solid $card-color-border-back-2;
+            }
+            
+
+        }
+        
+    }
+    
+    
+
+
+      
+   
+  
