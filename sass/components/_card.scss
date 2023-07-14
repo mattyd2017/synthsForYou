@@ -5,7 +5,7 @@
     height: 70rem; 
     &__side {
             height: 70rem;
-            transition: all 1.4s ease; 
+            transition: all 1.5s ease;  
             position: absolute;
             top: 0;
             left: 0;
@@ -37,7 +37,7 @@
        transform: rotateY(180deg); 
     }
     &:hover &__side--back {
-        transform: rotateY(0deg); 
+        transform: rotateY(0deg);  
     }
     
     &__heading {
@@ -45,7 +45,7 @@
         font-weight: 300;
         text-align: right;
         text-transform: uppercase;
-        color: $color-white;
+        color: white;
         position: absolute;
         top: 13rem;    
         right: 2rem;
@@ -59,7 +59,7 @@
            background-image: linear-gradient(to right bottom, rgba($card-color-back-1-light, .7), rgba($card-color-back-1-dark, .5)); 
         }
         &--2 {
-            background-image: linear-gradient(to right bottom, rgba($card-color-back-2-light, .9), rgba($card-color-back-2-dark, .4));               
+            background-image: linear-gradient(to right bottom, rgba($card-color-back-2-light, 8), rgba($card-color-back-2-dark, .4));                
         }
         
         &--3 {
@@ -100,6 +100,9 @@
         background-blend-mode: screen;
         -webkit-clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
         clip-path:polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+       
         &--1 {
               background-image: linear-gradient(to right bottom, $card-color-back-1-light, 
               $card-color-back-1-dark), url(../imgs/d50.jpg); 

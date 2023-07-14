@@ -1,4 +1,5 @@
 .btn {
+    margin-bottom: 4rem;
     &:link, &:visited {
         padding: 2rem 4rem !important;
         text-transform: uppercase;
@@ -6,8 +7,8 @@
         position: relative;
         display: inline-block;
         border-radius: 2rem;
-        transition: all .3s;
-        font-size: $text-font-size;   
+        transition: all 1s;
+        font-size: $text-font-size;  
     }
     &:hover {
         transform: translateY(-5px);
@@ -32,6 +33,34 @@
             background-color: $color-white;
         }
     }
+    &--red {
+        font-weight: bold;
+        font-size: 2rem;
+        background-color: $card-color-back-1-dark;   
+        color: $color-white;
+        
+        
+
+        &::after {
+            background-color: $color-btn;         
+        }
+    }
+    &--red-1 {
+        font-weight: bold;
+        font-size: 2rem;
+        background-color: $color-red;   
+        color: $color-white;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 20%;  
+        
+
+        &::after {
+            background-color: $color-btn;         
+        }
+    }
+    
+
     &::after {
         content: "";
         display: inline-block;
@@ -68,16 +97,16 @@
         transition: all .3s;
     }
     &:hover {
-        background-color: black;
+        background-color: $color-red;
         color: $color-white;
-        box-shadow: 0 1rem 2rem rgba(black, 0.7);
+        box-shadow: 0 1rem 2rem rgba(black, 0.7); 
         transform:  translateY(-2px);
         
     }
     &:active {
         box-shadow: 0 .5rem 1rem rgba(black, 0.7);
         transform:  translateY(0);
-    }
+    }  
 }
 
 

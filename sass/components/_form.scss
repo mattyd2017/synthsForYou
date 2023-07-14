@@ -1,0 +1,63 @@
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem; 
+    }
+    &__input {
+        font-size: 2rem;
+        font-family: inherit;
+        color: $color-blood-red;
+        padding: 1.5rem 2rem;  
+        border-radius: 3px;
+        background-color: rgba($color-white, .5 );
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .4s;
+        &::-webkit-input-placeholder {
+            color: $color-placeholder;        
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(black, .2);
+            border-bottom: 3px solid green;
+        }
+        &:focus:invalid {
+            border-bottom: 3px solid $color-red; 
+        }
+
+    }    
+    &__label {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        color: $color-blood-red;
+        transition: all .4s;
+    }
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);  
+    }
+    &__radio-group {
+        width: 50%; 
+        display: inline-block;
+    }
+    
+    &__radio-label-1 {
+        font-size: 2rem;
+        color: $color-blood-red;
+         
+    }
+    &__radio-label-2 {
+        font-size: 1.6rem;
+        padding: 2rem;
+        color: $color-blood-red;
+             
+         
+    }
+        
+    
+}
